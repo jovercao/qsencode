@@ -1,5 +1,5 @@
 {
-  "name": "querystring-helper",
+  "name": "qsencode",
   "version": "1.0.0",
   "description": "查询字符串处理函数",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jovercao/querystring.git"
+    "url": "git+https://github.com/jovercao/qsencode.git"
   },
   "keywords": [
     "querystring",
@@ -17,7 +17,10 @@
   "author": "jover",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jovercao/querystring/issues"
+    "url": "https://github.com/jovercao/qsencode/issues"
   },
-  "homepage": "https://github.com/jovercao/querystring#readme"
+  "homepage": "https://github.com/jovercao/qsencode#readme",
+  "devDependencies": {
+    "mocha": "^6.2.0"
+  }
 }

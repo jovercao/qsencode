@@ -1,5 +1,12 @@
 
-module.exports = function encode(params, path, pindex) {
+/**
+ * 将对象编码为querystring
+ * @param {*} params 参数
+ * @returns {string} 返回querystring
+ */
+function encode(params) {
+    const path = arguments[1];
+    const pindex = arguments[2];
     const isArray = Array.isArray(params);
     return Object.entries(params).reduce((str, [key, value], index) => {
         if (value === null || value === undefined) {
@@ -18,20 +25,17 @@ module.exports = function encode(params, path, pindex) {
             paramName = encodeURIComponent(key);
         }
 
-
-        switch (type) {
-            case 'object':
-                str += encode(value, paramName, index);
-                break;
-            default:
-                if (index > 0 || pindex > 0) {
-                    str += '&';
-                }
-                str += `${paramName}=${encodeURIComponent(value)}`;
-                break;
+        if (type === 'object') {
+            str += encode(value, paramName, index);
+        } else {
+            if (index > 0 || pindex > 0) {
+                str += '&';
+            }
+            str += `${paramName}=${encodeURIComponent(value)}`;
         }
         return str;
     }, '');
-};
+}
 
-module.exports.encode = module.exports;
+module.exports = encode;
+module.exports.encode = encode;
