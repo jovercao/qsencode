@@ -1,0 +1,23 @@
+{
+  "name": "querystring-helper",
+  "version": "1.0.0",
+  "description": "查询字符串处理函数",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jovercao/querystring.git"
+  },
+  "keywords": [
+    "querystring",
+    "helper"
+  ],
+  "author": "jover",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jovercao/querystring/issues"
+  },
+  "homepage": "https://github.com/jovercao/querystring#readme"
+}
