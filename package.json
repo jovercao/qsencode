@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/jovercao/qsencode#readme",
   "devDependencies": {
-    "mocha": "^6.2.0"
+    "mocha": "^10.2.0"
   }
 }
